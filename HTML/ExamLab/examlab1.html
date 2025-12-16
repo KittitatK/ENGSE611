@@ -3,63 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Set-up</title>
 </head>
-<body align ="">
-    <table>
+<body bgcolor="#EFF1F4">
 
-        <h1><strong>สมัคร</strong></h1>
-        <h3>ง่ายและเร็ว</h3>
-       
-        ___________________________________________________________
-        <br><br>
+    <table bgcolor="#FEFEFE" border="0" align ="center" cellpadding="9" cellspacing="6">
+        <tr>
+            <th align ="left">
 
-        <form>
-        <h3>ข้อมูลผู้ใช้</h3>
-        <label>ชื่อ</label>
-        <input type = "text"  name = "name" >
+                <font face="Tahoma" size="6"><strong>สมัคร</strong></font>
+                <p><font face="Tahoma" size="3" color="#606770">ง่ายและรวดเร็ว</font></p>
+              
+            </th>
 
-        <label>นามสกุล</label>
-        <input type = "text"  name = "surname">
 
-        <br><br>
+            <!--ทำให้อยู่ขวาบนโดยใช้ valign-->
+            <th align="right" valign="top">
+                <font face="Tahoma" size="4" color="#5F666F"><strong>X</strong></font>
+            </th>
+        </tr>
 
-        <label>หมายเลขโทรศัพท์มือถือหรืออีเมล์</label>
-        <input type = "text" name = "phoneAndEmail" >
 
-        <br><br>
+        <tr>
+            <td>
+                <font face="Tahoma" size="4" color="#DFDFDF"><strong>____________________________________________________________</strong></font>
+                <br>
+            </td>
+        </tr>
 
-        <label>รหัสผ่านใหม่</label>
-        <input type = "password" name = "password">
+        
+            <tr>
+                <td align ="left" cellspacing="8" cellpadding="8">
+                    <input type="text" name="name" placeholder="ชื่อ">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="username" placeholder="นามสกุล">
+                </td>
+            </tr>
 
-        <br><br>
 
-        <label>วันเกิด</label>
-        <p><input type = "date" name = "birthday"></p>
+            <tr>
+                <td align ="left">
+                    <input type="email" type="tel" name="emilphone" placeholder="หมายเลขโทรศัพท์มือถือหรืออีเมล์" size="50%">
+                </td>
+            </tr>
 
-        <label>เพศ</label>
 
-        <p>
-            <table border = "1" colspan="5">
-                <tr>
-                     <th>ชาย<input type = "radio" name = "gender" value = "male"></th>
+             <tr>
+                <td align ="left">
+                    <input type="password" name="password" placeholder="รหัสผ่านใหม่" size="50%">
+                </td>
+            </tr>
 
-                    <th>หญิง<input type = "radio" name = "gender" value = "female"></th>
-                </tr>
-            </table>
-            
-            
-        </p>
 
-        <br><br>
-        <p>เมื่อคลิก สมัคร แสดงว่าคุณยอมรับข้อกกำหนด นโยบายข้อมูล และนโยบาย<br>คุกกี้ของเรา คุณอาจได้รับการแจ้งเตือนทาง SMS จากเรา และสามารถเลือก<br>ไม่รับได้ภายหลัง</p>
+            <tr>
+                <td>
+                    <font face="Tahoma" size="3" color="#606770"><strong>วันเกิด</strong></font>
+                    <br>
+                    <select name = "day">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        <option>24</option>
+                        <option>25</option>
+                        <option>26</option>
+                        <option>27</option>
+                        <option>28</option>
+                        <option>29</option>
+                        <option>30</option>
+                        <option>31</option>
 
-        <br><br>
-        <button type = "submit">สมัคร</button>
-    </form>
+                    </select >
 
-    </table>
-    
-    
+
+                    <select name ="month">
+                        <option>ม.ค.</option>
+                        <option>ก.พ.</option>
+                        <option>มี.ค.</option>
+                        <option>เม.ย.</option>
+                        <option>พ.ค.</option>
+                        <option>มิ.ย.</option>
+                        <option>ก.ค.</option>
+                        <option>ส.ค.</option>
+                        <option>ก.ย.</option>
+                        <option>ต.ค.</option>
+                        <option>พ.ย.</option>
+                        <option>ธ.ค.</option>
+                    </select>
+
+
+                    <select name ="years">
+                        <option>2000</option>
+                        <option>2001</option>
+                        <option>2002</option>
+                        <option>2003</option>
+                        <option>2004</option>
+                        <option>2005</option>
+                        <option>2006</option>
+                        <option>2007</option>
+                        <option>2008</option>
+                        <option>2009</option>
+                        <option>2010</option>
+                        <option>2011</option>
+                        <option>2012</option>
+                        <option>2013</option>
+                        <option>2014</option>
+                        <option>2015</option>
+                        <option>2016</option>
+                        <option>2017</option>
+                        <option>2018</option>
+                        <option>2019</option>
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+        
+                    </select>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <font face="Tahoma" size="3" color="#606770"><strong>เพศ</strong></font>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <table align = "center" border="0" width="100%" cellpadding="4" cellspacing="10">
+                        <tr>
+                            <td width="50%">
+                                <table align = "center" border="1" width="100%" cellpadding="6" cellspacing="0">
+                                    <tr>
+                                        <td>
+                                            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td align="left">
+                                                    <font face="Tahoma" size="2">หญิง</font>
+                                                    </td>
+                                                    <td align="right">
+                                                    <input type="radio" name="gender" value="female">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+
+
+                            <td width="50%">
+                                <table align = "center" border="1" width="100%" cellpadding="6" cellspacing="0">
+                                    <tr>
+                                        <td>
+                                            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td align="left">
+                                                    <font face="Tahoma" size="2">ชาย</font>
+                                                    </td>
+                                                    <td align="right">
+                                                    <input type="radio" name="gender" value="male">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        
+        
+            <tr>
+                <td>
+                    <font face="Tahoma" size="3" color="#606770"><p>เมื่อคลิก สมัคร แสดงว่าคุณยอมรับข้อกกำหนด นโยบายข้อมูล และนโยบาย<br>คุกกี้ของเรา คุณอาจได้รับการแจ้งเตือนทาง SMS จากเรา และสามารถเลือก<br>ไม่รับได้ภายหลัง</p></font>
+                </td>
+            </tr>
+
+            <tr>
+                <td align ="center" >
+                    <button type="submit">สมัคร</button>
+                </td>
+            </tr>
+    </table> 
 </body>
 </html>

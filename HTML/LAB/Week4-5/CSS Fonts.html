@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fonts Comparison</title>
+    <style>
+        /* สไตล์พื้นฐานของหน้า */
+        body {
+            padding: 30px;
+            line-height: 1.8;
+        }
+
+        /* กรอบประเส้นประตามในรูป */
+        .container {
+            border: 1px dashed #666;
+            padding: 20px;
+            width: fit-content;
+        }
+
+        .header {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* 1. Sans-serif (Arial, Italic, Weight 400) */
+        .sans-serif {
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 20px;
+            color: black;
+            margin-bottom: 25px;
+        }
+
+        /* 2. Serif (Georgia, Normal, Weight 600) */
+        .serif-black {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-style: normal;
+            font-weight: 600; /* เทียบเท่า Bold */
+            font-size: 22px;
+            color: black;
+            margin-bottom: 25px;
+        }
+
+        /* 3. Serif Red (Georgia, Oblique/Italic, Weight 600) */
+        .serif-red {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-style: italic; /* ใน CSS ใช้ italic แทน oblique ได้ผลคล้ายกัน */
+            font-weight: 600;
+            font-size: 22px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">ความแตกต่างของฟอนต์แต่ละแบบ</div>
+
+        <div class="sans-serif">
+            Sans-serif<br>
+            (font-family: Arial; style: italic; weight: 400; size: 20px; color: black)
+        </div>
+
+        <div class="serif-black">
+            Serif<br>
+            (font-family: Georgia; style: normal; weight: 600; size: 22px; color: black)
+        </div>
+
+        <div class="serif-red">
+            Serif (Red)<br>
+            (font-family: Georgia; style: oblique; weight: 600; size: 22px; color: red)
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+
+    .flexbox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 15px;
+        background: #f0f0f0;
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .title-section {
+        width: 100%;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        background: white;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3) ;
+        border-radius: 15px;
+
+        color: black;
+
+        font-size: 20px;
+        width: 300px;
+        height: 100px;
+        text-align: left;
+        padding: 20px ;
+    }
+
+    .item:hover {
+        transform: scale(1.05);
+    }
+
+
+
+</style>
+</head>
+<body>
+
+    <h1>ผลลัพธ์โจทย์ที่ 1 : ออกแบบ Card Layout ด้วย Flexbox</h1>
+    
+    <div class="flexbox"  style="justify-content: center;">
+        <div class="title-section">
+            <h2><strong>โจทย์ที่ 1: Cardd Layout ด้วย Flexbox</strong></h2>
+        </div>
+
+        <div class="item">
+            <h3>Card 1</h3>
+            คำอธิบายเนื้อหาของการ์ดใบแรก
+        </div>
+
+        <div class="item">
+            <h3>Card 2</h3>
+            คำอธิบายเนื้อหาของการ์ดใบที่สอง
+        </div>
+
+        <div class="item">
+            <h3>Card 3</h3>
+            คำอธิบายเนื้อหาของการ์ดใบที่สาม
+        </div>
+    </div>
+</body>
+</html>

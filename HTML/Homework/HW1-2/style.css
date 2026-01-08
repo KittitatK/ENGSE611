@@ -1,0 +1,48 @@
+/* เปลี่ยนจาก header เป็น ID Selector #main-header */
+#main-header {
+    font-size: 24px;
+    text-shadow: 5px 5px 5px #555555;
+    font-weight: bold; /* เพิ่มเติมเพื่อให้ดูเป็นหัวข้อหลัก */
+}
+
+body {
+    background-image: url(https://png.pngtree.com/background/20230616/original/pngtree-faceted-abstract-background-in-3d-with-shimmering-iridescent-metallic-texture-of-picture-image_3653595.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.highlight {
+    background-color: yellow;
+    padding: 5px;
+}
+
+/* จัดกลุ่ม Input และ Textarea ที่มีสไตล์เหมือนกันเข้าด้วยกันเพื่อลดความซ้ำซ้อน */
+input[type="text"], 
+input[type="email"], 
+
+textarea#message {
+    border: 2px solid rgb(213, 100, 122);
+    padding: 8px; /* แก้ไข: เขียนติดกันเป็น 8px */
+    border-radius: 5px;
+    width: 100%; /* เพิ่มเติม: เพื่อให้กล่องพิมพ์สวยงามและมีขนาดเท่ากัน */
+    box-sizing: border-box; 
+}
+
+/* จัดกลุ่มสถานะ :focus ให้เปลี่ยนสีพร้อมกัน */
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+
+textarea#message:focus {
+    border-color: rgb(255, 0, 128);
+    outline: none;
+    background-color: #fff0fa;
+}
+
+/* ปุ่มกดสไตล์ Jelly */
+button[type="submit"].bttn-jelly.bttn-md {
+    border: 2px solid rgb(213, 100, 122);
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}

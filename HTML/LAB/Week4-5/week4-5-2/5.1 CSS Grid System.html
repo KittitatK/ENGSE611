@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+
+    /*Grid กล่องแม่*/
+    .grid-container {
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 100px;
+        gap: 10px;
+        background: #f5f5f5;
+        padding: 10px;
+    }
+
+    /* กล่องลูก*/
+    .item {
+        background: #4a90e2;
+        color: white;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* จัดตำแหน่งแบบกำหนดเอง*/
+    /* item1 ให้กินพื้นที่ 2 คอลัมน์ */
+    .item1{
+        grid-column: 1 / 3;
+    }
+
+    /* item 3 ให้ลงมาอยู่แถวล่าง */
+    .item3 {
+        grid-row: 2 / 3; /*เริ่ม 2 สิ้นสุด 3*/
+    }
+</style>
+</head>
+<body>
+    <div class="grid-container">
+    <div class="item item1">Item 1 (ขยาย 2 คอลัมน์)</div>
+    <div class="item item2">Item2</div>
+    <div class="item item3">Item3 (อยู่แถวล่าง)</div>
+    <div class="item item4">Item4</div>
+    <div class="item item5">Item5</div>
+</div>
+</body>
+</html>

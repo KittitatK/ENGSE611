@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    /*กล่องหลัก*/
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    /* เงาของการ์ด*/
+    .shadow {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ปุ่มพื้นฐาน */
+    .btn {
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* ปุ่มแบบ primary */
+    .btn-primary {
+        background: #007bff;
+        color: white;
+        border-radius: 6px;
+    }
+
+</style>
+</head>
+<body>
+
+    <div class="card shadow"> <!-- ใช้ 2 คลามพร้อมกัน-->
+        <h2 class="card-title">หัวข้อหลัก</h2>
+        <p class="card-text">เนื้อหาในการ์ด</p>
+
+        <!-- ปุ่มใช้คลาส btn + btn-primary -->
+        <button class="btn btn-primary">ปุ่ม</button>
+    </div>
+    
+</body>
+</html>

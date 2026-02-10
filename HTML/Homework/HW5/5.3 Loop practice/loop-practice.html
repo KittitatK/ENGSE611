@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop-Practice</title>
+</head>
+<body>
+    
+    <pre id="output">กำลังรับ</pre>
+    <button onclick="runResult()">RunCode</button>
+
+    <script>
+        function runResult() {
+
+            const output = [];
+
+            let maxNumber = 20;
+
+            for ( let i = 0 ; i <= maxNumber ; i++) {
+                if( i % 2 == 0){
+                    output.push( i + "( เลขคู่ )");
+                    console.log( i ,"( เลขคู่ )");
+                    continue;
+
+                }else if ( i % 2 == 1){
+                    output.push( i + "( เลขคี่ )");
+                    console.log( i ,"( เลขคี่ )");
+                    continue;
+
+                }else{
+                    output.push( "( Error )");
+                    console.log( "( Error )");
+                    continue;
+                }
+            }
+
+            for ( let i = 0 ; i <= maxNumber ; i += 2) {
+                output.push("บวกเลขทีละ 2:" + i);
+                console.log("บวกเลขทีละ 2:", i);
+            }
+
+            for ( let i = maxNumber ; i >= 0 ; i --) {
+                output.push("ถอยหลัง :" + i);
+                console.log("ถอยหลัง :", i);
+            }
+            document.getElementById("output").textContent = output.join("\n");
+        }
+    </script>
+</body>
+</html>

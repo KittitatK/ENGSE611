@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+</head>
+<body>
+    <button id ="loadWeather">โหลดข้อมูลสภาพอากาศ</button>
+    <pre id="result">กดปุ่มเพื่อโหลดข้อมูล...</pre>
+
+    <script>
+        //ดึง Element จากเว็บ
+        const button = document.getElementById("loadWeather");
+        const result = document.getElementById("result");
+
+        // เมื่อกดปุ่มให้เรียก API
+        button.addEventListener("click", async () => {
+
+            //URL ของ Weather API (Open-Meteo) https://open-meteo.com/
+            // latitude และ longtitude ของอำเภอต่างๆ
+            // URL ที่ถูกต้องสำหรับการใช้งานร่วมกับโค้ดส่วนอื่นของคุณ
+/* const url = "https://api.open-meteo.com/v1/forecast?latitude=18.7142&longitude=99.0353&current=temperature_2m,relative_humidity_2m,wind_speed_10m&timezone=Asia/Bangkok";*/
+        
+            /* const url = กรณีผิด
+            "https://api.open-meteo.com/v1/forecast?timezone=Asia%2FBangkok" +
+            "&latitude=18.7142&longitude=99.0353" +
+            "&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,rain"; */
+
+            const url = 
+            "https://api.open-meteo.com/v1/forecast?timezone=Asia%2FBangkok" +
+            "&latitude=18.7142&longitude=99.0353" +
+            "&current=temperature_2m,relative_humidity_2m,wind_speed_10m,rain";
+
+            try {
+
+                //ส่ง request ไปยัง API
+                const response = await fetch(url);
+
+                // ตรวจสอบว่ามีการเชื่อมต่อสำเร็จหรือไม่
+                if(!response.ok){
+                    throw new Error("ไม่สามารถเชื่อมต่อ API ได้");
+                }
+
+                // แปลงข้อมูล JSON ที่ได้จาก sever ให้เป็น JavaScript Object
+                const data = await response.json();
+
+                // ดึงข้อมูลจากสภาพอากาศปัจจุบันจาก Json
+                const weather = data.current;
+
+                // แสดงผลข้อมูลบนหน้าเว็บ
+                result.textContent = 
+                    "สถานที่ : อำเภอสารภี  จังหวัดเชียงใหม่\n" +
+                    "อุณหภูมิ : " + weather.temperature_2m + " °C\n" +
+                    "ความชื้น : " + weather.relative_humidity_2m + " %\n" +
+                    "ความฝน : " + weather.rain + " %\n" +
+                    "ความเร็วลม : " + weather.wind_speed_10m + " km/h\n" +
+                    "เวลา : " + weather.time;
+
+                // แสดงโครงสร้าง JSON ใน Console
+                console.log(data);
+
+            } catch(error){
+                // หากเกิดข้อผิดพลาดให้แสดงข้อความ
+                result.textContent = "เกิดข้อผิดพลาด : " + error.message;
+            }
+            
+        });
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="testLoop()">ทดสอบความเร็วของ Loop</button>
+    <button onclick="runTest()">รันทดสอบ DOM ทั้งสองแบบ</button>
+    
+    <h3>Normal DOM List</h3>
+    <ul id="list-normal"></ul>
+    
+    <h3>Fragment DOM List</h3>
+    <ul id="list-fragment"></ul>
+    <script>
+        // ===========================
+        // 1) Performance Test: console.time
+        // ===========================
+        function testLoop() {
+            console.time("Loop 1M");
+            let sum = 0;
+            for (let i = 0; i < 1000000; i++) {
+                sum += i;
+            }
+            console.timeEnd("Loop 1M");
+            alert("ผลลัพธ์ดูได้ใน Developer Console");
+        }
+
+        // ===========================
+        // 2) DocumentFragment Test
+        // ===========================
+        function runTest() {
+            const listNormal = document.getElementById("list-normal");
+            const listFragment = document.getElementById("list-fragment");
+
+            listNormal.innerHTML = "";
+            listFragment.innerHTML = "";
+
+            // Normal DOM (ช้า)
+            console.time("Normal DOM");
+            for (let i = 0; i < 1000; i++) {
+                const li = document.createElement("li");
+                li.textContent = `Item ${i}`;
+                listNormal.appendChild(li);
+            }
+            console.timeEnd("Normal DOM");
+
+            // Fragment DOM (เร็ว)
+            console.time("Fragment DOM");
+            const fragment = document.createDocumentFragment();
+            for (let i = 0; i < 1000; i++) {
+                const li = document.createElement("li");
+                li.textContent = `Item ${i}`;
+                fragment.appendChild(li);
+            }
+
+            listFragment.appendChild(fragment);
+            console.timeEnd("Fragment DOM");
+
+            alert("เสร็จสิ้น! ดูเวลาที่วัดได้ใน Developer Console");
+        }
+
+    </script>
+</body>
+</html>

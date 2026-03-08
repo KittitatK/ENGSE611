@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body { font-family: Tahoma; padding: 20px; background: #f4f4f4; }
+
+        .container {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        #username {
+            padding: 8px;
+            width: 250px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+</style>
+</head>
+<body>
+    <div class="container">
+         <form id="myForm">
+             <input type="text" id="username" placeholder="Username (ต้องมี 3+ ตัวอักษร)">
+        </form>
+    </div>
+
+    <script>
+        let username = document.getElementById('username');
+
+        // เมื่อ focus ที่ input
+        username.addEventListener('focus', function() {
+            this.style.backgroundColor = '#e3f2fd';
+        }); 
+
+        // เมื่อออกจากช่อง (blur)
+        username.addEventListener('blur', function() {
+            this.style.backgroundColor = '';
+
+            // Validation
+            if (this.value.length < 3){
+                this.style.borderColor = 'red';
+
+            }else{
+                this.style.borderColor = 'green';
+            }
+        });
+    </script>
+    
+</body>
+</html>
